@@ -1,0 +1,12 @@
+@import 'base.css';
+
+#modal {position: fixed; width: 100%; height: 100%; background-image: linear-gradient(rgba(247, 168, 180, 0.7), rgba(232, 193, 95, 0.7), rgba(173, 252, 255, 0.7)); display:none;}
+#modal_cont {width:80%; margin:20% auto; color: #f1f1f1;}
+#modal_cont h2 {color: rgb(255, 239, 209); font-weight: bold; text-align: center;}
+.wrap {width: 100%; height: 100%;}
+ul.navs {z-index: 10000;}
+li.nav {width: 50%; float:left; padding: 0.75rem; padding-bottom: calc(0.75rem + 14px); text-align: center; font-size: 1.5rem; border-bottom: none; cursor: pointer; background-color: white; position: relative;}
+.cont {border:5px solid #ccc; height:calc(100% - 1.5rem - 2.25rem); margin-top : -5px; position: relative; z-index: 1;}
+
+li.nav:first-child {z-index:100;}
+
