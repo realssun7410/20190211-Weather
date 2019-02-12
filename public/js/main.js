@@ -98,19 +98,19 @@ function weeklyInit(data) {
     var $weekly = $("#weekly");
     var html = '<div>';
     for (var i in data.list) {
-        src = "../img/icon/" +data.weather[0].icon + ".png";
-        date =data.list[i].dt_text;
-        temp = data.list[i].main.temp+ " ℃";
-        temp2 = data.list[i].main.temp_max+ " ℃ /" + data.list[i].main.temp_max + " ℃ /";
-        html += '<ul>';
-        html += '<li><img= src="'+src+'" class ="img"></li>';
-        html += '<li>';
-        html += '<div>예보날짜: '+date+'</div>';
-        html += '<div>현재온도: '+temp+'</div>';
-        html += '<div>최고/최저온도: '+temp2+'</div>';
-        html += '</li>';
+        src = "../img/icon/" + data.list[i].weather[0].icon + ".png";
+        date = data.list[i].dt_txt;
+        temp = data.list[i].main.temp + " ℃";
+        temp2 = data.list[i].main.temp_max + " ℃ / " + data.list[i].main.temp_min + " ℃"
+        html += '<ul class="clear">';
+        html += ' <li class="icon"><img src="' + src + '" class="img"></li>';
+        html += ' <li class="content">';
+        html += '   <div>예보날짜: ' + date + '</div>';
+        html += '   <div>현재온도: ' + temp + '</div>';
+        html += '   <div>최고/최저온도: ' + temp2 + '</div>';
+        html += ' </li>';
         html += '</ul>';
     }
     html += '</div>';
-    $(this).
+    $weekly.html(html);
 }
